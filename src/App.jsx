@@ -1,3 +1,8 @@
+import {Route, Routes} from 'react-router-dom'
+import Navbar from './Components/Navbar'
+
+
+
 const App = () =>{
 
 
@@ -5,6 +10,11 @@ const App = () =>{
 
   return(
     <>
+    <Navbar/>
+    <Routes>
+
+
+    </Routes>
     
     </>
   )

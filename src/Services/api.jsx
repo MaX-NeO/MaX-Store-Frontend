@@ -33,17 +33,17 @@ const deleteUser = (id) => axios.delete(URI+`/user/delete/${id}`)
 
 const loginUser = (user) => axios.post(URI+"/user/login",user)
 
-const resetpassUser = (user)=> axios.post(URI,"/user/resetpassword",user)
+const resetpwdUser = (user)=> axios.post(URI,"/user/resetpassword",user)
 
 
 
 // Admin API Calls
 
-const getAdmins = () => axios.get(URI+"/admin/getall")
-
-const loginAdmin = (admin) => axios.post(URI+"/admin/login",admin)
+const getAdmin = () => axios.get(URI+"/admin/getall")
 
 const addAdmin = (admin) => axios.post(URI+"/admin/add",admin)
+
+const loginAdmin = (admin) => axios.post(URI+"/admin/login",admin)
 
 const resetpwdAdmin = (admin) => axios.put(URI+"/admin/resetpassword")
 
@@ -53,6 +53,33 @@ const resetpwdAdmin = (admin) => axios.put(URI+"/admin/resetpassword")
 
 const addOrder = (order) => axios.post(URI+"/orders/add",order)
 
-const getOrders = () => axios.get(URI+"/orders/getall")
+const getOrder = () => axios.get(URI+"/orders/getall")
 
-const findOrders = (id) => axios.get(URI+`/orders/find/${id}`)
+const findOrder = (id) => axios.get(URI+`/orders/find/${id}`)
+
+
+
+export {
+    getProducts,
+    findProduct,
+    addProduct,
+    updateProduct,
+    deleteProduct,
+
+    getUsers,
+    findUser,
+    addUser,
+    updateUser,
+    deleteUser,
+    loginUser,
+    resetpwdUser,
+
+    addOrder,
+    getOrder,
+    findOrder,
+
+    getAdmin,
+    addAdmin,
+    loginAdmin,
+    resetpwdAdmin
+}
